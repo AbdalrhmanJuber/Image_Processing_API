@@ -1,0 +1,41 @@
+{
+  "name": "image_processing",
+  "version": "1.0.0",
+  "description": "This project for creating an API for serving resizing jpg photoes",
+  "license": "ISC",
+  "author": "Abdelrahman Jaber",
+  "type": "commonjs",
+  "main": "build/server.js",
+  "scripts": {
+  "build": "tsc -p tsconfig.json",
+  "start": "node build/server.js",
+  "dev": "nodemon src/server.ts",
+  "test": "tsc -p tsconfig.spec.json && node spec/support/jasmine.mjs",
+  "lint": "eslint src/**/*.ts",
+  "format": "prettier --write src/**/*.ts"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "sharp": "^0.34.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "@types/express": "^5.0.3",
+    "@types/jasmine": "^5.1.9",
+    "@types/node": "^24.3.0",
+    "@types/supertest": "^6.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint": "^9.34.0",
+    "globals": "^16.3.0",
+    "jasmine": "^5.10.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "jiti": "^2.5.1",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "supertest": "^7.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.42.0"
+  }
+}

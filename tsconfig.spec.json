@@ -1,0 +1,10 @@
+
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": ".",           // now rootDir covers both src/ and spec/
+    "outDir": "./build",      // compiled JS will go to build/
+    "composite": false
+  },
+  "include": ["src/**/*", "spec/**/*"]
+}
