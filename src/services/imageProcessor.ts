@@ -22,7 +22,11 @@ export class ImageProcessor {
         height,
         path: outputPath,
       };
-    } catch {}
+    } catch (error: unknown) {
+      if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+        throw error;
+      }
+    }
 
     try {
       await fs.access(inputPath);

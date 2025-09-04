@@ -13,7 +13,7 @@ export const validateImageQuery = (
     errors.push('width is required');
   } else {
     const widthNum = parseInt(width);
-    if (isNaN(widthNum) || widthNum <= 0) {
+    if (isNaN(widthNum) || widthNum <= 0 || width !== widthNum.toString()) {
       errors.push('width must be a positive number');
     }
   }
@@ -22,7 +22,7 @@ export const validateImageQuery = (
     errors.push('height is required');
   } else {
     const heightNum = parseInt(height);
-    if (isNaN(heightNum) || heightNum <= 0) {
+    if (isNaN(heightNum) || heightNum <= 0 || height !== heightNum.toString()) {
       errors.push('height must be a positive number');
     }
   }
